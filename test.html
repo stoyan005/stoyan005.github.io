@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Taskbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS to override/extend Tailwind for specific effects */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Tailwind classes for body are applied directly in the body tag */
+        }
+
+        /* Pure CSS Burger Menu Logic */
+        /* Hide the actual checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* When checkbox is checked, show the navigation */
+        #menu-toggle:checked ~ .taskbar-center .taskbar-nav {
+            transform: translateY(0); /* Slide in */
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Pure CSS Dropdown (shows on hover) */
+        .group:hover .group-hover\:block {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+        .group:hover .group-hover\:translate-y-0 {
+            transform: translateY(0);
+        }
+
+        /* Specific styling for the mobile nav drawer */
+        @media (max-width: 900px) {
+            .taskbar-nav {
+                /* Initially hidden and off-screen */
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen pt-16">
+    <nav class="taskbar fixed top-0 left-0 w-full h-16 bg-gray-900 text-white flex items-center justify-between px-6 shadow-lg z-50">
+        <div class="flex items-center h-full">
+            <a href="#" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors duration-300 mr-8">
+                YourApp
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="burger-icon text-2xl cursor-pointer text-gray-300 hover:text-white transition-colors duration-300 lg:hidden">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+
+        <div class="taskbar-center flex-grow flex justify-center lg:flex-none">
+            <ul class="taskbar-nav flex flex-col lg:flex-row list-none m-0 p-0
+                       lg:static lg:bg-transparent lg:shadow-none lg:p-0 lg:w-auto lg:h-auto lg:visible lg:opacity-100 lg:transform-none
+                       absolute top-16 left-0 w-full bg-gray-800 shadow-xl py-4 items-start lg:items-center">
+                <li class="lg:mr-6 mb-2 lg:mb-0 w-full lg:w-auto">
+                    <a href="#" class="block px-4 py-2 text-lg lg:text-base text-gray-300 hover:text-white border-b-2 border-transparent hover:border-indigo-500 transition-all duration-300
+                                      active-link font-semibold">
+                        Home
+                    </a>
+                </li>
+                <li class="lg:mr-6 mb-2 lg:mb-0 w-full lg:w-auto">
+                    <a href="#" class="block px-4 py-2 text-lg lg:text-base text-gray-300 hover:text-white border-b-2 border-transparent hover:border-indigo-500 transition-all duration-300">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="lg:mr-6 mb-2 lg:mb-0 w-full lg:w-auto">
+                    <a href="#" class="block px-4 py-2 text-lg lg:text-base text-gray-300 hover:text-white border-b-2 border-transparent hover:border-indigo-500 transition-all duration-300">
+                        Projects
+                    </a>
+                </li>
+                <li class="lg:mr-6 mb-2 lg:mb-0 w-full lg:w-auto">
+                    <a href="#" class="block px-4 py-2 text-lg lg:text-base text-gray-300 hover:text-white border-b-2 border-transparent hover:border-indigo-500 transition-all duration-300">
+                        Reports
+                    </a>
+                </li>
+                <li class="w-full lg:w-auto">
+                    <a href="#" class="block px-4 py-2 text-lg lg:text-base text-gray-300 hover:text-white border-b-2 border-transparent hover:border-indigo-500 transition-all duration-300">
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="taskbar-right flex items-center h-full">
+            <div class="taskbar-icon text-gray-300 hover:text-white text-xl cursor-pointer transition-colors duration-300 ml-6">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="taskbar-icon text-gray-300 hover:text-white text-xl cursor-pointer transition-colors duration-300 ml-6 relative group">
+                <i class="fas fa-user-circle"></i>
+                <div class="dropdown-menu absolute top-full right-0 mt-3 bg-gray-800 rounded-md shadow-lg py-2 min-w-[160px]
+                            hidden opacity-0 transform translate-y-[-10px] transition-all duration-300 group-hover:block group-hover:opacity-100 group-hover:translate-y-0">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200 rounded-sm">Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors duration-200 rounded-sm">Account Settings</a>
+                    <hr class="border-gray-700 my-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-red-400 hover:bg-gray-700 hover:text-red-300 transition-colors duration-200 rounded-sm">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md mt-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Welcome to Your Authentic Homepage!</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            This is a modern, responsive taskbar built purely with **HTML and CSS**, leveraging the power of Tailwind CSS for a clean and authentic look. No JavaScript was used to create any of its interactive elements.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Observe the smooth hover effects on navigation links and icons. The "Home" link is marked as active to simulate the current page. On smaller screens, the traditional navigation transforms into a sleek, sliding menu, activated by the burger icon.
+        </p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Key Features:</h3>
+        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+            <li>**Fixed Position:** The taskbar stays at the top as you scroll.</li>
+            <li>**Modern Design:** Clean lines, subtle shadows, and a professional color palette.</li>
+            <li>**Pure CSS Interactivity:**
+                <ul class="list-circle list-inside ml-6 mt-1 space-y-1">
+                    <li>**Hover Effects:** Smooth transitions on links and icons.</li>
+                    <li>**Active Link State:** Clearly highlights the current page.</li>
+                    <li>**Hover-based Dropdown:** The user icon reveals a dropdown menu on hover.</li>
+                    <li>**Responsive Burger Menu:** On screens below 900px, the main navigation collapses into a hamburger menu, which slides open and closed using the CSS "checkbox hack."</li>
+                </ul>
+            </li>
+            <li>**Fully Responsive:** Adapts beautifully to desktop, tablet, and mobile screen sizes.</li>
+            <li>**Authentic Look:** Designed to mimic the feel of a real web application's navigation.</li>
+        </ul>
+        <p class="text-gray-600 leading-relaxed">
+            Feel free to resize your browser window to experience the responsive design. This taskbar provides a robust and visually appealing navigation solution for any web project.
+        </p>
+        <div class="h-96 bg-gray-50 rounded-md mt-8 flex items-center justify-center text-gray-400 text-xl border border-dashed border-gray-300">
+            Scroll down to see the fixed taskbar in action!
+        </div>
+        <div class="h-96 bg-gray-50 rounded-md mt-8 flex items-center justify-center text-gray-400 text-xl border border-dashed border-gray-300">
+            More content to demonstrate scrolling...
+        </div>
+    </div>
+</body>
+</html>
