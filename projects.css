@@ -16,29 +16,46 @@ body {
 }
 
 
-/* THIS IS FOR THE SPLASH SCREEN 
-#splash {
-    position: fixed;
+ THIS IS FOR THE SPLASH SCREEN 
+.splash {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: fixed;
     background: #000;
     color: #fff;
-    font-size: 6rem;
+    font-size: 4rem;
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 1;
-    animation: swipeUpFade 1s ease-in-out 1s forwards;
-}*/
+    left: 0;
+    z-index: 200;
+    animation: FadeOut 1s forwards;
+    animation-delay: 2s;
+}
 
-@keyframes swipeUpFade {
+@keyframes FadeIn {
     to {
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
+      opacity: 1;
     }
   }
+
+.fadein {
+    opacity: 0;
+    animation: FadeIn 1s ease-in forwards;
+}
+
+@keyframes FadeOut {
+    99% {
+        opacity: 0;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
 
 
 /* THIS IS FOR THE NAVIGATION BAR */
