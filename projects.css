@@ -59,12 +59,14 @@ body {
 /* THIS IS FOR THE NAVIGATION BAR */
 header {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	font-weight: bold;
 	height: 140px;
 	margin-bottom: 40px;
 	background-color: rgb(32, 35, 42);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 0 90px;
 }
 
 header nav ul {
@@ -76,15 +78,21 @@ header nav ul {
 	margin-right: 30px;
 }
 
+.logo-navbar {
+	height: 100px;
+	width: 100px;
+	border-radius: 15px;
+}
+
 header nav li a {
 	display: block;
 	color: #fff;
 	letter-spacing: 1px;
 	border-radius: 15px;
 	font-size: 1.5rem;
-	padding: 30px 30px;
 	text-decoration: none;
 	transition: all 0.3s ease;
+	padding: 20px 24px;
 }
 
 header nav li a:hover {
