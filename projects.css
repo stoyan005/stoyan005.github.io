@@ -87,7 +87,7 @@ header nav li a {
 	transition: all 0.3s ease;
 }
 
-header nav ul a:hover {
+header nav li a:hover {
 	background-color: #fff;
 	color: black;
 	transform: translateY(-10px);
