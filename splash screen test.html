@@ -2,95 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="ss.css ">
 		<title>Tech Journey</title>
-		<style>
-			body,
-			html {
-				margin: 0;
-				padding: 0;
-				height: 100%;
-				font-family: "Segoe UI", sans-serif;
-			}
+		
+	<nav class="navbar">
+  <div class="logo">Stoyan Ivanov.</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+  </div>
+</nav>
 
-			/* Animated Gradient Background */
-			.animated-bg {
-				background: linear-gradient(
-					-45deg,
-					#1f1c2c,
-					#928dab,
-					#0f2027,
-					#2c5364
-				);
-				background-size: 400% 400%;
-				animation: gradientFlow 15s ease infinite;
-				height: 100vh;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			@keyframes gradientFlow {
-				0% {
-					background-position: 0% 50%;
-				}
-				50% {
-					background-position: 100% 50%;
-				}
-				100% {
-					background-position: 0% 50%;
-				}
-			}
-
-			.card-container {
-				display: flex;
-				gap: 2rem;
-			}
-
-			.card {
-				background-color: rgba(0, 0, 0, 0.6);
-				color: white;
-				padding: 2rem;
-				border-radius: 20px;
-				width: 220px;
-				text-align: center;
-				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-				transition: transform 0.3s ease;
-			}
-
-			.card:hover {
-				transform: scale(1.05);
-			}
-
-			.card h2 {
-				margin: 1rem 0 0.5rem;
-				font-size: 2.5rem;
-			}
-
-			.card p {
-				color: #ddd;
-				font-size: 1rem;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="animated-bg">
-			<div class="card-container">
-				<div class="card">
-					<div>✅</div>
-					<p>Courses Complete:</p>
-					<h2>10</h2>
-				</div>
-				<div class="card">
-					<div>📁</div>
-					<p>Projects Complete:</p>
-					<h2>11</h2>
-				</div>
-				<div class="card">
-					<div>⏱️</div>
-					<p>Total Hours Coded:</p>
-					<h2>150</h2>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>

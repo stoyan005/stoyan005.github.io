@@ -1,128 +1,87 @@
 /* Base styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #111;
-  transition: background 0.3s, color 0.3s;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	color: #111;
+	transition: background 0.3s, color 0.3s;
 }
 
-.projects_display {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+header {
+	display: flex;
+	justify-content: space-between; /* Push logo left, nav right */
+	align-items: center;
+	font-weight: bold;
+	height: 140px;
+	padding: 0 2rem; /* Space on both sides */
+	background-color: #181820; /* Optional, matches your image */
 }
 
-.projects_title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #222;
+.logo {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
-/* Projects Grid */
-.projects_box {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  padding: 0 1rem;
+header nav ul {
+	display: flex;
+	list-style-type: none;
+	gap: 2em;
+	font-size: 2rem;
+	margin: 0;
+	padding: 0;
 }
 
-@media (min-width: 640px) {
-  .projects_box {
-    grid-template-columns: repeat(2, 1fr);
-  }
+header nav li a {
+	display: block;
+	color: #fff;
+	letter-spacing: 1px;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	padding: 20px 20px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-@media (min-width: 1024px) {
-  .projects_box {
-    grid-template-columns: repeat(3, 1fr);
-  }
+header nav ul a:hover {
+	background-color: #fff;
+	color: black;
+	transform: translateY(-10px);
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Individual Project Card */
-.project_containers {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
+header {
+	display: flex;
+	justify-content: right;
+	font-weight: bold;
+	height: 140px;
+	padding-top: 1rem;
 }
 
-.project_containers:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.project_containers:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.project_containers img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+header nav ul {
+	display: flex;
+	list-style-type: none;
+	gap: 2em;
+	font-size: 2rem;
+	margin-bottom: 5px;
+	margin-right: 2rem;
 }
 
-.project_containers h2 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+header nav li a {
+	display: block;
+	color: #fff;
+	letter-spacing: 1px;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	padding: 20px 20px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-.project_containers p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.project_containers a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project_containers a:hover {
-  text-decoration: underline;
-}
-
-.project_containers:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* Fade-in Animation */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #1f2937;
-    color: #f3f4f6;
-  }
-
-  .projects_title {
-    color: #e5e7eb;
-  }
-
-  .project_containers {
-    background: #374151;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  }
-
-  .project_containers p {
-    color: #d1d5db;
-  }
-
-  .project_containers a {
-    color: #93c5fd;
-  }
+header nav ul a:hover {
+	background-color: #fff;
+	color: black;
+	transform: translateY(-10px);
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
