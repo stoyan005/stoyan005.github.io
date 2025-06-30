@@ -65,6 +65,7 @@ header {
 	height: 130px;
 	padding: 0 2rem;
 	background-color: #181820;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
