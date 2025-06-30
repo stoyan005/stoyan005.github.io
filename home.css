@@ -325,4 +325,5 @@ footer .column > a:hover {
 	background-color: #39397c;
 	font-size: 0.5rem;
 	padding: 1rem;
+	max-width: 100%;
 }
