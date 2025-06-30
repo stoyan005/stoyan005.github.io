@@ -1,87 +1,59 @@
-/* Base styles */
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background: #f4f4f4;
-	color: #111;
-	transition: background 0.3s, color 0.3s;
-}
-
-header {
+footer {
+	position: relative;
 	display: flex;
-	justify-content: space-between; /* Push logo left, nav right */
-	align-items: center;
-	font-weight: bold;
-	height: 140px;
-	padding: 0 2rem; /* Space on both sides */
-	background-color: #181820; /* Optional, matches your image */
+	flex-direction: row;
+	justify-content: center;
+	gap: 15rem;
+	color: white;
+	padding: 4rem 2rem 8rem;
+	flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+	text-align: center;
 }
 
-.logo {
+footer .logo img {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	height: 300px;
+	max-width: 100%;
+}
+
+footer .column {
+	min-width: 200px;
+	margin: 1rem;
+}
+
+footer .column h4 {
 	color: #fff;
+	margin-bottom: 2rem;
 	font-size: 2rem;
-	font-weight: bold;
+	font-weight: 600;
 }
 
-header nav ul {
-	display: flex;
-	list-style-type: none;
-	gap: 2em;
-	font-size: 2rem;
-	margin: 0;
-	padding: 0;
-}
-
-header nav li a {
+footer .column > a {
 	display: block;
+	padding: 1rem;
 	color: #fff;
-	letter-spacing: 1px;
-	border-radius: 15px;
-	font-size: 1.5rem;
-	padding: 20px 20px;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
-header nav ul a:hover {
-	background-color: #fff;
-	color: black;
-	transform: translateY(-10px);
-	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+footer .column > a:hover {
+	color: #b10e0e;
 }
 
-header {
-	display: flex;
-	justify-content: right;
-	font-weight: bold;
-	height: 140px;
-	padding-top: 1rem;
-}
+/* 🔁 Responsive Styling */
+@media (max-width: 900px) {
+	footer {
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+	}
 
-header nav ul {
-	display: flex;
-	list-style-type: none;
-	gap: 2em;
-	font-size: 2rem;
-	margin-bottom: 5px;
-	margin-right: 2rem;
-}
+	footer .logo img {
+		height: 200px;
+	}
 
-header nav li a {
-	display: block;
-	color: #fff;
-	letter-spacing: 1px;
-	border-radius: 15px;
-	font-size: 1.5rem;
-	padding: 20px 20px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-}
-
-header nav ul a:hover {
-	background-color: #fff;
-	color: black;
-	transform: translateY(-10px);
-	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+	footer .column h4 {
+		font-size: 1.5rem;
+	}
 }
