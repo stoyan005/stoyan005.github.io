@@ -15,7 +15,7 @@ body {
 	padding-top: 2rem;
 }
 
-/* THIS IS THE SPLASH SCREEN 
+/* THIS IS THE SPLASH SCREEN */
 .splash {
 	display: flex;
 	flex-direction: column;
@@ -54,7 +54,7 @@ body {
 		opacity: 0;
 		display: none;
 	}
-} */
+}
 
 /* THIS IS FOR THE NAVIGATION BAR */
 header {
@@ -66,6 +66,7 @@ header {
 	padding: 0 2rem;
 	background-color: #181820;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	max-width: 100%;
 }
 
 .logo {
