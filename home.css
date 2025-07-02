@@ -57,6 +57,15 @@ body {
 	}
 }
 
+@media (max-width: 900px) {
+	.splash {
+		display: flex;
+		flex: wrap;
+		justify-content: center;
+		font-size: 2rem;
+	}
+}
+
 /* THIS IS FOR THE NAVIGATION BAR */
 header {
 	display: flex;
