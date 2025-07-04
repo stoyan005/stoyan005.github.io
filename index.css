@@ -22,9 +22,9 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	font-weight: bold;
-	height: 130px;
-	padding: 0 2rem;
+	font-weight: 500;
+	height: 50px;
+	padding: 0 3rem;
 }
 
 .logo {
@@ -37,7 +37,6 @@ header nav ul {
 	display: flex;
 	list-style-type: none;
 	gap: 3em;
-	font-size: 2rem;
 	padding: 0;
 	margin: 0;
 }
@@ -47,8 +46,8 @@ header nav li a {
 	color: #fff;
 	letter-spacing: 1px;
 	border-radius: 15px;
-	font-size: 1.5rem;
-	padding: 20px 20px;
+	font-size: 1.25rem;
+	padding: 15px 15px;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
