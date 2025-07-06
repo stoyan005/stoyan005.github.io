@@ -3,166 +3,40 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio - Tomasz Gajda</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<style>
-			* {
-				text-align: center;
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-family: "Inter", sans-serif;
-			}
-
-			body {
-				height: 100vh;
-				display: flex;
-				flex-direction: column;
-				background: linear-gradient(
-					105deg,
-					rgb(194, 191, 191) 50%,
-					black 30%
-				);
-			}
-
-			.container {
-				display: flex;
-				height: 100vh;
-			}
-
-			.left {
-				width: 50%;
-				padding: 60px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.right {
-				width: 50%;
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.profile-img {
-				width: 80%;
-				max-width: 350px;
-				border-radius: 20px;
-			}
-
-			.intro {
-				color: #333;
-			}
-
-			.intro h1 {
-				font-size: 2.5rem;
-				margin: 10px 0;
-			}
-
-			.intro h2 {
-				font-size: 1rem;
-				color: gray;
-				font-weight: 400;
-			}
-
-			.social-icons {
-				margin-top: 30px;
-				display: flex;
-				gap: 15px;
-			}
-
-			.social-icons a {
-				align-items: center;
-				display: inline-block;
-				width: 40px;
-				height: 40px;
-				background-color: #fff;
-				border-radius: 5px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-decoration: none;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-				transition: background-color 0.3s;
-			}
-
-			.social-icons a:hover {
-				background-color: #ddd;
-			}
-
-			nav {
-				position: absolute;
-				top: 30px;
-				right: 50px;
-				display: flex;
-				gap: 30px;
-				align-items: center;
-			}
-
-			nav a {
-				color: white;
-				text-decoration: none;
-				font-size: 0.95rem;
-			}
-
-			.contact-button {
-				background-color: white;
-				color: black;
-				padding: 8px 16px;
-				border-radius: 20px;
-				font-size: 0.9rem;
-				text-decoration: none;
-				font-weight: bold;
-			}
-
-			.logo {
-				position: absolute;
-				top: 30px;
-				left: 30px;
-			}
-
-			.logo img {
-				width: 30px;
-			}
-		</style>
+		<title>Image Fade into Background</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
+	<style>
+		body {
+			margin: 0;
+			background-color: #000000; /* Set background color */
+		}
+
+		.image-container {
+			width: 100%;
+			max-width: 600px;
+			margin: 40px auto;
+			overflow: hidden;
+		}
+
+		.image-container img {
+			border-radius: 150px;
+			width: 100%;
+			height: auto;
+			display: block;
+
+			/* Fading mask */
+			mask-image: radial-gradient(circle, black 60%, transparent 100%);
+			-webkit-mask-image: radial-gradient(
+				circle,
+				black 60%,
+				transparent 100%
+			);
+		}
+	</style>
 	<body>
-		<div class="container">
-			<div class="left">
-				<div class="logo">
-					<img src="logo-placeholder.png" alt="Logo" />
-				</div>
-				<div class="intro">
-					<p>Hi, I am</p>
-					<h1>Tomasz Gajda</h1>
-					<h2>Front-end Developer / UI Designer</h2>
-				</div>
-				<div class="social-icons">
-					<a href="#"
-						><img src="email-icon.png" alt="Email" width="20"
-					/></a>
-					<a href="#"
-						><img src="github-icon.png" alt="GitHub" width="20"
-					/></a>
-					<a href="#"
-						><img src="linkedin-icon.png" alt="LinkedIn" width="20"
-					/></a>
-				</div>
-			</div>
-			<div class="right">
-				<nav>
-					<a href="#">About me</a>
-					<a href="#">Skills</a>
-					<a href="#">Portfolio</a>
-					<a class="contact-button" href="#">CONTACT ME</a>
-				</nav>
-			</div>
+		<div class="image-container">
+			<img src="coding_logo.jpg" alt="Fading Image" />
 		</div>
 	</body>
 </html>
