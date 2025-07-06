@@ -13,7 +13,7 @@ body {
 	color: #ffffff;
 	padding-top: 2rem;
 	overflow: hidden;
-	background: linear-gradient(105deg, #c2bfbf 50%, #000000 30%);
+	background: linear-gradient(105deg, #e0dede 50%, #000000 30%);
 }
 
 /* THIS IS FOR THE NAVIGATION BAR */
@@ -118,7 +118,7 @@ header nav ul a:hover {
 .icons-socials {
 	display: flex;
 	flex-direction: row;
-	gap: 2rem;
+	gap: 3rem;
 	padding: 1rem;
 }
 
@@ -133,6 +133,6 @@ header nav ul a:hover {
 	background-color: white;
 	color: black;
 	transform: scale(1.2);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	transition: all 0.3s ease;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
