@@ -31,6 +31,7 @@ header {
 	color: #000000;
 	font-size: 2rem;
 	font-weight: bold;
+	animation: floatInLeft 0.8s ease-out forwards;
 }
 
 header nav ul {
@@ -50,9 +51,7 @@ header nav li a {
 	padding: 15px 15px;
 	text-decoration: none;
 	transition: all 0.3s ease;
-	opacity: 0;
-	transform: translateY(20px);
-	animation: fadeUp 0.8s ease-out forwards;
+	animation: floatInRight 0.8s ease-out forwards;
 }
 
 header nav ul a:hover {
@@ -85,13 +84,6 @@ header nav ul a:hover {
 	header nav li a {
 		font-size: 2rem;
 		padding: 20px 20px;
-	}
-}
-
-@keyframes fadeUp {
-	to {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }
 
@@ -202,5 +194,27 @@ header nav ul a:hover {
 	}
 	50% {
 		border-color: white;
+	}
+}
+
+@keyframes floatInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes floatInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
