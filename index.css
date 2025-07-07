@@ -50,6 +50,9 @@ header nav li a {
 	padding: 15px 15px;
 	text-decoration: none;
 	transition: all 0.3s ease;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeUp 0.8s ease-out forwards;
 }
 
 header nav ul a:hover {
@@ -85,7 +88,15 @@ header nav ul a:hover {
 	}
 }
 
-.container {
+@keyframes fadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* THIS IS FOR THE LEFT-SIDE CONTAINER */
+.container_1 {
 	display: flex;
 	height: 85vh;
 }
@@ -96,10 +107,14 @@ header nav ul a:hover {
 	justify-content: center;
 	align-items: center;
 	width: 50%;
-	padding: 1rem;
+	padding: 4rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: floatUp 0.8s ease-out forwards;
 }
 
 .intro {
+	font-size: 2rem;
 	font-weight: 500;
 	color: #333;
 }
@@ -112,7 +127,7 @@ header nav ul a:hover {
 .intro h2 {
 	font-size: 1.25rem;
 	color: rgb(119, 114, 114);
-	font-weight: 400;
+	font-weight: bold;
 }
 
 .icons-socials {
@@ -135,4 +150,57 @@ header nav ul a:hover {
 	transform: scale(1.2);
 	transition: all 0.3s ease;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* THIS IS FOR THE RIGHT-SIDE CONTAINER */
+.right-side {
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	padding: 5rem;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: floatUp 0.8s ease-out forwards;
+}
+
+.uni {
+	font-size: 2rem;
+	font-weight: 500;
+	color: white;
+}
+
+.uni h1 {
+	font-size: 2.5rem;
+	margin: 10px 0;
+}
+.uni h2 {
+	font-size: 1.25rem;
+	color: white;
+	font-weight: bold;
+}
+
+@keyframes floatUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.languages {
+	font-weight: 600;
+	font-size: 2rem;
+	border-right: 2px solid #fff;
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		border-color: transparent;
+	}
+	50% {
+		border-color: white;
+	}
 }

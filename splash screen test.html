@@ -2,41 +2,57 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Image Fade into Background</title>
-		<link rel="stylesheet" href="styles.css" />
+		<title>Wider Tablet</title>
+		<style>
+			.right-section {
+				position: relative;
+				width: 50vw; /* Or whatever size your layout uses */
+				height: 100vh;
+				background-color: black;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Laptop image styling */
+			.hero-laptop {
+				width: 80%;
+				height: auto;
+
+				/* Smooth fade on edges */
+				mask-image: radial-gradient(
+					circle,
+					rgba(0, 0, 0, 1) 70%,
+					rgba(0, 0, 0, 0) 100%
+				);
+				-webkit-mask-image: radial-gradient(
+					circle,
+					rgba(0, 0, 0, 1) 70%,
+					rgba(0, 0, 0, 0) 100%
+				);
+
+				/* Optional fade-in animation */
+				animation: fadeIn 1.5s ease-in-out;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
 	</head>
-	<style>
-		body {
-			margin: 0;
-			background-color: #000000; /* Set background color */
-		}
-
-		.image-container {
-			width: 100%;
-			max-width: 600px;
-			margin: 40px auto;
-			overflow: hidden;
-		}
-
-		.image-container img {
-			border-radius: 150px;
-			width: 100%;
-			height: auto;
-			display: block;
-
-			/* Fading mask */
-			mask-image: radial-gradient(circle, black 60%, transparent 100%);
-			-webkit-mask-image: radial-gradient(
-				circle,
-				black 60%,
-				transparent 100%
-			);
-		}
-	</style>
 	<body>
-		<div class="image-container">
-			<img src="coding_logo.jpg" alt="Fading Image" />
+		<div class="right-section">
+			<img
+				src="logo1.png"
+				alt="Laptop Illustration"
+				class="hero-laptop"
+			/>
 		</div>
 	</body>
 </html>
