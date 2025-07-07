@@ -61,6 +61,7 @@ header nav ul a:hover {
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
+/* THIS IS FOR THE NAVBAR RESPONSIVENESS */
 @media (max-width: 800px) {
 	header {
 		flex-direction: column;
@@ -84,6 +85,29 @@ header nav ul a:hover {
 	header nav li a {
 		font-size: 2rem;
 		padding: 20px 20px;
+	}
+}
+
+/* THIS IS FOR THE NAVBAR ANIMATIONS */
+@keyframes floatInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes floatInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 
@@ -173,6 +197,7 @@ header nav ul a:hover {
 	font-weight: bold;
 }
 
+/* THIS IS ANIMATION FOR BOTH CONTAINERS*/
 @keyframes floatUp {
 	to {
 		opacity: 1;
@@ -194,27 +219,5 @@ header nav ul a:hover {
 	}
 	50% {
 		border-color: white;
-	}
-}
-
-@keyframes floatInLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes floatInRight {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
 	}
 }
