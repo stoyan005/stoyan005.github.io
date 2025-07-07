@@ -40,6 +40,7 @@ header nav ul {
 	gap: 3em;
 	padding: 0;
 	margin: 0;
+	animation: floatInRight 0.8s ease forwards;
 }
 
 header nav li a {
@@ -51,7 +52,6 @@ header nav li a {
 	padding: 15px 15px;
 	text-decoration: none;
 	transition: all 0.3s ease;
-	animation: floatInRight 0.8s ease-out forwards;
 }
 
 header nav ul a:hover {

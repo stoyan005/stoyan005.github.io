@@ -36,4 +36,4 @@ function main() {
 	}, 20);
 }
 
-setTimeout(main, 2200);
+setTimeout(main, 500);
