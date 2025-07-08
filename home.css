@@ -27,7 +27,7 @@ header {
 	padding: 0 3rem;
 }
 
-.logo {
+.logo_header {
 	color: #ffffff;
 	font-size: 2rem;
 	font-weight: bold;
@@ -71,7 +71,7 @@ header nav ul a:hover {
 		gap: 3rem;
 	}
 
-	.logo {
+	.logo_header {
 		text-align: center;
 		font-size: 3rem;
 	}
@@ -290,7 +290,7 @@ footer {
 	flex-wrap: wrap;
 }
 
-footer .logo img {
+footer .logo_footer img {
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 	border-radius: 25px;
 	height: 300px;
@@ -328,7 +328,7 @@ footer .column > a:hover {
 		gap: 2rem;
 	}
 
-	footer .logo img {
+	footer .logo_footer img {
 		height: 200px;
 	}
 }

@@ -27,7 +27,7 @@ header {
 	padding: 0 3rem;
 }
 
-.logo {
+.logo_header {
 	color: #000000;
 	font-size: 2rem;
 	font-weight: bold;
@@ -71,7 +71,7 @@ header nav ul a:hover {
 		gap: 3rem;
 	}
 
-	.logo {
+	.logo_header {
 		text-align: center;
 		font-size: 3rem;
 	}
