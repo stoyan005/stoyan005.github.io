@@ -111,50 +111,6 @@ header nav ul a:hover {
 	}
 }
 
-/* THIS IS FOR THE NAME AND ABOUT CONTAINERS */
-.container_name {
-	background-color: #282c34;
-	display: flex;
-	flex-direction: column;
-	margin: 2rem;
-	margin-top: 3rem;
-	padding: 1rem;
-	border-radius: 10px;
-}
-
-.container_about {
-	background-color: #282c34;
-	display: flex;
-	flex-direction: column;
-	margin: 2rem;
-	padding: 1rem;
-	border-radius: 10px;
-}
-
-.container_about ul li {
-	display: inline;
-	list-style-type: none;
-	font-size: 40px;
-	padding: 3rem;
-}
-
-.languages {
-	font-weight: 600;
-	font-size: 2em;
-	border-right: 2px solid #fff;
-	animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-	0%,
-	100% {
-		border-color: transparent;
-	}
-	50% {
-		border-color: white;
-	}
-}
-
 /* THIS IS FOR THE INFORMATION BOXES */
 .info_title {
 	color: #fff;
@@ -339,4 +295,45 @@ footer .column > a:hover {
 	font-size: 0.5rem;
 	padding: 1rem;
 	max-width: 100%;
+}
+
+/* THIS IS FOR THE SKILLS CONTAINER */
+.container_skills {
+	padding: 2rem;
+	text-align: center;
+}
+
+.skills_title {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.skills h2 {
+	font-size: 1.5rem;
+	color: #e0e0e0;
+	margin-bottom: 40px;
+}
+
+.skills_logos {
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+}
+
+.logo {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.logo img[alt*="JavaScript"] {
+	transform: scale(1.4); /* Increase size to match others */
 }
