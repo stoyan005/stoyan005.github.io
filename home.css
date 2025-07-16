@@ -160,7 +160,7 @@ header nav ul a:hover {
 
 .contacts {
 	display: grid;
-	grid-template-columns: repeat(4, 2fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem;
 	margin: 2rem;
 	margin-top: 5rem;
@@ -218,6 +218,32 @@ header nav ul a:hover {
 	color: #333;
 	transform: translateY(-3px);
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+	.contacts {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 1000px) {
+	.contacts {
+		grid-template-columns: 1fr;
+	}
+
+	.contacts .boxes p {
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+	}
+
+	.contacts .boxes a {
+		font-size: 1.5rem;
+		padding: 6px 15px;
+	}
+
+	.contacts .boxes h4 {
+		font-size: 1.5rem;
+	}
 }
 
 /* HORIZONTAL LINE */
