@@ -222,7 +222,7 @@ header nav ul a:hover {
 
 @media (max-width: 1300px) {
 	.contacts {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
