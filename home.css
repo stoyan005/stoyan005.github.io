@@ -267,7 +267,7 @@ footer {
 	flex-direction: row;
 	justify-content: center;
 	color: #fff;
-	gap: 10rem;
+	gap: 5rem;
 	padding: 4rem 2rem 8rem;
 	flex-wrap: wrap;
 }
@@ -311,7 +311,7 @@ footer .column > a:hover {
 	}
 
 	footer .logo_footer img {
-		height: 200px;
+		height: 100px;
 	}
 }
 
