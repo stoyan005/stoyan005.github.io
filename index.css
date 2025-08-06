@@ -94,6 +94,7 @@ header nav ul a:hover {
 		opacity: 0;
 		transform: translateX(-50px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateX(0);
@@ -105,6 +106,7 @@ header nav ul a:hover {
 		opacity: 0;
 		transform: translateX(50px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateX(0);
@@ -191,6 +193,7 @@ header nav ul a:hover {
 	font-size: 2.5rem;
 	margin: 10px 0;
 }
+
 .uni h2 {
 	font-size: 1.25rem;
 	color: white;
@@ -213,10 +216,12 @@ header nav ul a:hover {
 }
 
 @keyframes blink {
+
 	0%,
 	100% {
 		border-color: transparent;
 	}
+
 	50% {
 		border-color: white;
 	}
