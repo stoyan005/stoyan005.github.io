@@ -19,13 +19,11 @@ body {
 /* THIS IS FOR THE NAVIGATION BAR */
 .navbar {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	font-weight: 500;
 	height: 50px;
 	padding: 0 3rem;
-	position: relative;
 }
 
 .logo_header {
@@ -33,6 +31,12 @@ body {
 	font-size: 2rem;
 	font-weight: bold;
 	animation: floatInLeft 0.8s ease-out forwards;
+}
+
+.navbar-lang {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
 }
 
 .navbar nav ul {
@@ -114,8 +118,7 @@ body {
 	}
 }
 
-/* Your existing navbar styles remain unchanged */
-
+/* THIS IS FOR THE LANGUAGE DROPDOWN MENU */
 
 
 /* THIS IS FOR THE LEFT-SIDE CONTAINER */
