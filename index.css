@@ -17,7 +17,7 @@ body {
 }
 
 /* THIS IS FOR THE NAVIGATION BAR */
-header {
+.navbar {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -25,6 +25,7 @@ header {
 	font-weight: 500;
 	height: 50px;
 	padding: 0 3rem;
+	position: relative;
 }
 
 .logo_header {
@@ -34,7 +35,7 @@ header {
 	animation: floatInLeft 0.8s ease-out forwards;
 }
 
-header nav ul {
+.navbar nav ul {
 	display: flex;
 	list-style-type: none;
 	gap: 3em;
@@ -43,7 +44,7 @@ header nav ul {
 	animation: floatInRight 0.8s ease forwards;
 }
 
-header nav li a {
+.navbar nav li a {
 	display: block;
 	color: #fff;
 	letter-spacing: 1px;
@@ -54,7 +55,7 @@ header nav li a {
 	transition: all 0.3s ease;
 }
 
-header nav ul a:hover {
+.navbar nav ul a:hover {
 	background-color: #fff;
 	color: black;
 	transform: translateY(-10px);
@@ -63,7 +64,7 @@ header nav ul a:hover {
 
 /* THIS IS FOR THE NAVBAR RESPONSIVENESS */
 @media (max-width: 800px) {
-	header {
+	.navbar {
 		flex-direction: column;
 		align-items: center;
 		height: auto;
@@ -76,13 +77,13 @@ header nav ul a:hover {
 		font-size: 3rem;
 	}
 
-	header nav ul {
+	.navbar nav ul {
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
 	}
 
-	header nav li a {
+	.navbar nav li a {
 		font-size: 2rem;
 		padding: 20px 20px;
 	}
@@ -112,6 +113,10 @@ header nav ul a:hover {
 		transform: translateX(0);
 	}
 }
+
+/* Your existing navbar styles remain unchanged */
+
+
 
 /* THIS IS FOR THE LEFT-SIDE CONTAINER */
 .container_1 {

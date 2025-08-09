@@ -1,18 +1,157 @@
-.footer_box { display: flex; flex-direction: row; justify-content: center;
-align-items: flex-start; flex-wrap: wrap; gap: 5rem; padding: 5rem;
-background-color: #14141c; /* assuming your dark background */ color: #fff; } /*
-Logo container */ .footer_box .logo_footer { flex: 0 0 auto; display: flex;
-justify-content: center; align-items: center; } .footer_box .logo_footer img {
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); border-radius: 25px; height: 250px;
-width: 250px; object-fit: contain; } /* Text columns */ .footer_box .column {
-flex: 1 1 160px; min-width: 160px; } .footer_box .column h4 { margin-bottom:
-1.5rem; font-size: 1.5rem; font-weight: 600; color: #fff; } .footer_box .column
-a { display: block; padding: 0.5rem 0; color: #fff; text-decoration: none;
-transition: all 0.3s ease; } .footer_box .column a:hover { color: #b10e0e; } /*
-Responsive for tablets and below */ @media (max-width: 1000px) { .footer_box {
-flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 3rem;
-padding: 3rem 2rem; } .footer_box .logo_footer { flex-basis: 100%;
-justify-content: center; } .footer_box .logo_footer img { height: 150px; width:
-150px; } .footer_box .column { text-align: center; } } /* Responsive for small
-phones */ @media (max-width: 600px) { .footer_box { flex-direction: column;
-align-items: center; text-align: center; } }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navbar with Outside Dropdown</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            position: relative;
+            /* Important for absolute positioning of dropdown */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            padding: 0 3rem;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo_header {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 0 3rem;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        .logo_header {
+            margin-right: 2rem;
+            /* space between logo and nav+lang */
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-and-lang {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            /* space between nav and language dropdown */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3em;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.25rem;
+            padding: 15px 0;
+        }
+
+        .language-dropdown {
+            position: relative;
+            cursor: pointer;
+            font-weight: 500;
+            color: white;
+        }
+
+        .language-button {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 5px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 120px;
+            list-style: none;
+            padding: 0.5em 0;
+            z-index: 1000;
+        }
+
+        .language-dropdown:hover .language-menu {
+            display: block;
+        }
+
+        .language-menu li {
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+
+        .language-menu li:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo_header">Stoyan Ivanov.</div>
+
+        <div class="nav-and-lang">
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+
+            <div class="language-dropdown">
+                <button class="language-button">English ▼</button>
+                <ul class="language-menu">
+                    <li>English</li>
+                    <li>Bulgarian</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+</body>
+
+</html>
