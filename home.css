@@ -33,7 +33,7 @@ body {
 	animation: floatInLeft 0.8s ease-out forwards;
 }
 
-.navbar-language {
+.navbar-lang {
 	display: flex;
 	align-items: center;
 	gap: 2rem;
