@@ -445,5 +445,4 @@ hr {
 
 .logo img[alt*="JavaScript"] {
 	transform: scale(1.4);
-	/* Increase size to match others */
 }
