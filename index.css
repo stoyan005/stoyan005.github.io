@@ -49,6 +49,7 @@ body {
 }
 
 .navbar nav li a {
+	position: relative;
 	display: block;
 	color: #fff;
 	letter-spacing: 1px;
@@ -56,14 +57,22 @@ body {
 	font-size: 1.25rem;
 	padding: 15px 15px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 
-.navbar nav ul a:hover {
-	background-color: #fff;
-	color: black;
-	transform: translateY(-10px);
-	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+.navbar nav ul a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 3px;
+	bottom: 7px;
+	background-color: #ffffff;
+	transition: width 0.3s ease;
+}
+
+.navbar nav ul a:hover::after {
+	width: 100%;
 }
 
 /* THIS IS FOR THE NAVBAR RESPONSIVENESS */
