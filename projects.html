@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="logo1.png" />
-		<link rel="stylesheet" href="projects.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Personal Website</title>
-	</head>
-	<body>
-		<header>
-			<div class="logo_header">Stoyan Ivanov.</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="logo1.png" />
+	<link rel="stylesheet" href="projects.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet" />
+	<title>Personal Website</title>
+</head>
+
+<body>
+	<header class="navbar">
+		<div class="logo_header">Stoyan Ivanov.</div>
+
+		<div class="navbar-language">
 			<nav>
 				<ul>
 					<li><a href="index.html">About</a></li>
@@ -23,125 +25,134 @@
 					<li><a href="projects.html">Projects</a></li>
 				</ul>
 			</nav>
-		</header>
 
-		<hr />
-
-		<section class="counters">
-			<h2 class="info_title">TECH JOURNEY</h2>
-			<div class="counter_boxes">
-				<div class="containers">
-					<img src="badge.svg" />
-					<h2>Courses Complete:</h2>
-					<span class="counter_1">0</span>
-				</div>
-				<div class="containers">
-					<img src="folder.svg" />
-					<h2>Projects Complete:</h2>
-					<span class="counter_2">0</span>
-				</div>
-				<div class="containers">
-					<img src="clock.svg" />
-					<h2>Total Hours Coded:</h2>
-					<span class="counter_3">0</span>
-				</div>
+			<div class="language-dropdown">
+				<button class="language-button">
+					<img src="Flag_of_the_United_Kingdom_(1-2).png" alt="Flag" class="flags">English</button>
+				<ul class="language-menu">
+					<li><img src="Flag_of_the_United_Kingdom_(1-2).png" alt="English flag" class="flags">English</li>
+					<li><img src="Flag_of_Bulgaria.png" alt="Bulgarian flag" class="flags">Bulgarian</li>
+				</ul>
 			</div>
-		</section>
-
-		<hr />
-
-		<section class="projects_display">
-			<h2 class="projects_title">PROJECTS AND PLANNING</h2>
-			<div class="projects_box">
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 1" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 2" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 3" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 3" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 3" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-				<div class="project_containers">
-					<img src="logo1.png" alt="Project 3" />
-					<h2>Project One</h2>
-					<p>
-						This is a brief description of Project One. It's clean,
-						responsive, and stylish.
-					</p>
-					<a href="https://github.com/stoyan005">View Project →</a>
-				</div>
-			</div>
-		</section>
-
-		<hr />
-
-		<footer class="footer_box">
-			<div class="logo_footer">
-				<img src="coding_logo.jpg" alt="coding logo" />
-			</div>
-			<div class="column">
-				<h4>Profile</h4>
-				<a href="home.html">Based in London</a>
-				<a href="home.html">BSc Computer Science</a>
-				<a href="##">My Story</a>
-			</div>
-			<div class="column">
-				<h4>Contact</h4>
-				<a href="#contact">Email Me</a>
-				<a href="https://www.linkedin.com/in/stoyan-ivanov-198979298/"
-					>LinkedIn</a
-				>
-				<a href="https://github.com/stoyan005">Github</a>
-			</div>
-			<div class="column">
-				<h4>Information</h4>
-				<a href="#">CV / Resume</a>
-				<a href="#">Portfolio</a>
-				<a href="#info">Website</a>
-			</div>
-		</footer>
-
-		<div class="copyright">
-			<h1>Copyright © 2025 Stoyan Ivanov. All Rights Reserved.</h1>
 		</div>
+	</header>
 
-		<script src="projects.js"></script>
-	</body>
+	<hr />
+
+	<section class="counters">
+		<h2 class="info_title">TECH JOURNEY</h2>
+		<div class="counter_boxes">
+			<div class="containers">
+				<img src="badge.svg" />
+				<h2>Courses Complete:</h2>
+				<span class="counter_1">0</span>
+			</div>
+			<div class="containers">
+				<img src="folder.svg" />
+				<h2>Projects Complete:</h2>
+				<span class="counter_2">0</span>
+			</div>
+			<div class="containers">
+				<img src="clock.svg" />
+				<h2>Total Hours Coded:</h2>
+				<span class="counter_3">0</span>
+			</div>
+		</div>
+	</section>
+
+	<hr />
+
+	<section class="projects_display">
+		<h2 class="projects_title">PROJECTS AND PLANNING</h2>
+		<div class="projects_box">
+			<div class="project_containers">
+				<img src="SDI_logo_coloured.webp" alt="Project 1" />
+				<h2>SDI & Sons's Ltd.</h2>
+				<p>
+					This is a project that I worked on for a business called SDI & Son's Ltd. It specialises in painting
+					and decorating, the website is small and took around 2 weeks to create.
+				</p>
+				<a href="https://stoyan005.github.io/SDI-Sons/">View Project →</a>
+			</div>
+			<div class="project_containers">
+				<img src="logo1.png" alt="Project 2" />
+				<h2>Project One</h2>
+				<p>
+					This is a brief description of Project One. It's clean,
+					responsive, and stylish.
+				</p>
+				<a href="https://github.com/stoyan005">View Project →</a>
+			</div>
+			<div class="project_containers">
+				<img src="logo1.png" alt="Project 3" />
+				<h2>Project One</h2>
+				<p>
+					This is a brief description of Project One. It's clean,
+					responsive, and stylish.
+				</p>
+				<a href="https://github.com/stoyan005">View Project →</a>
+			</div>
+			<div class="project_containers">
+				<img src="logo1.png" alt="Project 3" />
+				<h2>Project One</h2>
+				<p>
+					This is a brief description of Project One. It's clean,
+					responsive, and stylish.
+				</p>
+				<a href="https://github.com/stoyan005">View Project →</a>
+			</div>
+			<div class="project_containers">
+				<img src="logo1.png" alt="Project 3" />
+				<h2>Project One</h2>
+				<p>
+					This is a brief description of Project One. It's clean,
+					responsive, and stylish.
+				</p>
+				<a href="https://github.com/stoyan005">View Project →</a>
+			</div>
+			<div class="project_containers">
+				<img src="logo1.png" alt="Project 3" />
+				<h2>Project One</h2>
+				<p>
+					This is a brief description of Project One. It's clean,
+					responsive, and stylish.
+				</p>
+				<a href="https://github.com/stoyan005">View Project →</a>
+			</div>
+		</div>
+	</section>
+
+	<hr />
+
+	<footer class="footer_box">
+		<div class="logo_footer">
+			<img src="coding_logo.jpg" alt="coding logo" />
+		</div>
+		<div class="column">
+			<h4>Profile</h4>
+			<a href="home.html">Based in London</a>
+			<a href="home.html">BSc Computer Science</a>
+			<a href="##">My Story</a>
+		</div>
+		<div class="column">
+			<h4>Contact</h4>
+			<a href="#contact">Email Me</a>
+			<a href="https://www.linkedin.com/in/stoyan-ivanov-198979298/">LinkedIn</a>
+			<a href="https://github.com/stoyan005">Github</a>
+		</div>
+		<div class="column">
+			<h4>Information</h4>
+			<a href="#">CV / Resume</a>
+			<a href="#">Portfolio</a>
+			<a href="#info">Website</a>
+		</div>
+	</footer>
+
+	<div class="copyright">
+		<h1>Copyright © 2025 Stoyan Ivanov. All Rights Reserved.</h1>
+	</div>
+
+	<script src="projects.js"></script>
+</body>
+
 </html>
