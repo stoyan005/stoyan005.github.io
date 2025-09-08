@@ -16,7 +16,7 @@ body {
 	background: linear-gradient(105deg, #e0dede 50%, #000000 30%);
 }
 
-/* THIS IS FOR THE NAVIGATION BAR */
+/* ! THIS IS FOR THE NAVIGATION BAR */
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -43,8 +43,6 @@ body {
 	display: flex;
 	list-style-type: none;
 	gap: 3em;
-	padding: 0;
-	margin: 0;
 	animation: floatInRight 0.8s ease forwards;
 }
 
@@ -66,7 +64,7 @@ body {
 	left: 0;
 	width: 0;
 	height: 3px;
-	bottom: 7px;
+	bottom: 6px;
 	background-color: #ffffff;
 	transition: width 0.3s ease;
 }
@@ -75,7 +73,7 @@ body {
 	width: 100%;
 }
 
-/* THIS IS FOR THE NAVBAR RESPONSIVENESS */
+/* ! THIS IS FOR THE NAVBAR RESPONSIVENESS */
 @media (max-width: 800px) {
 	.navbar {
 		flex-direction: column;
@@ -102,7 +100,7 @@ body {
 	}
 }
 
-/* THIS IS FOR THE NAVBAR ANIMATIONS */
+/* ! THIS IS FOR THE NAVBAR ANIMATIONS */
 @keyframes floatInLeft {
 	from {
 		opacity: 0;
@@ -127,7 +125,7 @@ body {
 	}
 }
 
-/* THIS IS FOR THE LANGUAGE DROPDOWN MENU */
+/* ! THIS IS FOR THE LANGUAGE DROPDOWN MENU */
 .language-dropdown {
 	position: relative;
 	cursor: pointer;
@@ -202,7 +200,7 @@ body {
 	object-fit: cover;
 }
 
-/* THIS IS FOR THE LEFT-SIDE CONTAINER */
+/* ! THIS IS FOR THE LEFT-SIDE CONTAINER */
 .container_1 {
 	display: flex;
 	height: 85vh;
@@ -259,7 +257,7 @@ body {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* THIS IS FOR THE RIGHT-SIDE CONTAINER */
+/* ! THIS IS FOR THE RIGHT-SIDE CONTAINER */
 .right-side {
 	display: flex;
 	flex-direction: center;
@@ -289,7 +287,7 @@ body {
 	font-weight: bold;
 }
 
-/* THIS IS ANIMATION FOR BOTH CONTAINERS*/
+/* ! THIS IS ANIMATION FOR BOTH CONTAINERS*/
 @keyframes floatUp {
 	to {
 		opacity: 1;

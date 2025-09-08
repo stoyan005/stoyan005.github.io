@@ -16,7 +16,7 @@ body {
 	overflow-x: hidden;
 }
 
-/* THIS IS FOR THE NAVIGATION BAR */
+/* ! THIS IS FOR THE NAVIGATION BAR */
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -43,12 +43,11 @@ body {
 	display: flex;
 	list-style-type: none;
 	gap: 3em;
-	padding: 0;
-	margin: 0;
 	animation: floatInRight 0.8s ease forwards;
 }
 
 .navbar nav li a {
+	position: relative;
 	display: block;
 	color: #fff;
 	letter-spacing: 1px;
@@ -56,17 +55,26 @@ body {
 	font-size: 1.25rem;
 	padding: 15px 15px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 
-.navbar nav ul a:hover {
-	background-color: #fff;
-	color: black;
-	transform: translateY(-10px);
-	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+.navbar nav ul a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 3px;
+	bottom: 6px;
+	background-color: #ffffff;
+	transition: width 0.3s ease;
 }
 
-/* THIS IS FOR THE NAVBAR RESPONSIVENESS */
+.navbar nav ul a:hover::after {
+	width: 100%;
+}
+
+
+/* ! THIS IS FOR THE NAVBAR RESPONSIVENESS */
 @media (max-width: 800px) {
 	.navbar {
 		flex-direction: column;
@@ -93,7 +101,7 @@ body {
 	}
 }
 
-/* THIS IS FOR THE NAVBAR ANIMATIONS */
+/* ! THIS IS FOR THE NAVBAR ANIMATIONS */
 @keyframes floatInLeft {
 	from {
 		opacity: 0;
@@ -118,7 +126,7 @@ body {
 	}
 }
 
-/* THIS IS FOR THE LANGUAGE DROPDOWN MENU */
+/* ! THIS IS FOR THE LANGUAGE DROPDOWN MENU */
 .language-dropdown {
 	position: relative;
 	cursor: pointer;
@@ -193,7 +201,7 @@ body {
 	object-fit: cover;
 }
 
-/* THIS IS FOR THE INFORMATION BOXES */
+/* ! THIS IS FOR THE INFORMATION BOXES */
 .info_title {
 	color: #fff;
 	font-size: 2rem;
@@ -233,7 +241,7 @@ body {
 	font-size: 1.5rem;
 }
 
-/* THIS IS FOR THE CONTACT BOXES */
+/* ! THIS IS FOR THE CONTACT BOXES */
 .contact_title {
 	color: #fff;
 	font-size: 2rem;
@@ -328,7 +336,7 @@ body {
 	}
 }
 
-/* HORIZONTAL LINE */
+/* ! HORIZONTAL LINE */
 hr {
 	border: none;
 	height: 1px;
@@ -340,7 +348,7 @@ hr {
 	margin: 2rem 0;
 }
 
-/* FOOTER */
+/* ! FOOTER */
 .footer_box {
 	display: flex;
 	flex-direction: row;
@@ -403,15 +411,7 @@ hr {
 	}
 }
 
-/* COPYRIGHT */
-.copyright {
-	background-color: #39397c;
-	font-size: 0.5rem;
-	padding: 1rem;
-	max-width: 100%;
-}
-
-/* THIS IS FOR THE SKILLS CONTAINER */
+/* ! THIS IS FOR THE SKILLS CONTAINER */
 .container_skills {
 	padding: 2rem;
 	text-align: center;
@@ -450,4 +450,12 @@ hr {
 
 .logo img[alt*="JavaScript"] {
 	transform: scale(1.4);
+}
+
+/* ! COPYRIGHT */
+.copyright {
+	background-color: #39397c;
+	font-size: 0.5rem;
+	padding: 1rem;
+	max-width: 100%;
 }
