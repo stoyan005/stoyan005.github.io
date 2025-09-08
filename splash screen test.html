@@ -1,18 +1,110 @@
-.footer_box { display: flex; flex-direction: row; justify-content: center;
-align-items: flex-start; flex-wrap: wrap; gap: 5rem; padding: 5rem;
-background-color: #14141c; /* assuming your dark background */ color: #fff; } /*
-Logo container */ .footer_box .logo_footer { flex: 0 0 auto; display: flex;
-justify-content: center; align-items: center; } .footer_box .logo_footer img {
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); border-radius: 25px; height: 250px;
-width: 250px; object-fit: contain; } /* Text columns */ .footer_box .column {
-flex: 1 1 160px; min-width: 160px; } .footer_box .column h4 { margin-bottom:
-1.5rem; font-size: 1.5rem; font-weight: 600; color: #fff; } .footer_box .column
-a { display: block; padding: 0.5rem 0; color: #fff; text-decoration: none;
-transition: all 0.3s ease; } .footer_box .column a:hover { color: #b10e0e; } /*
-Responsive for tablets and below */ @media (max-width: 1000px) { .footer_box {
-flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 3rem;
-padding: 3rem 2rem; } .footer_box .logo_footer { flex-basis: 100%;
-justify-content: center; } .footer_box .logo_footer img { height: 150px; width:
-150px; } .footer_box .column { text-align: center; } } /* Responsive for small
-phones */ @media (max-width: 600px) { .footer_box { flex-direction: column;
-align-items: center; text-align: center; } }
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<style>
+			/* === Theme Setup === */
+			body {
+				margin: 0;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background-color: #f9f6f1;
+				color: #333;
+				line-height: 1.6;
+			}
+
+			header {
+				background-color: #ffffff;
+				padding: 20px 40px;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+			}
+
+			header h1 {
+				margin: 0;
+				font-size: 28px;
+			}
+
+			.container {
+				max-width: 1100px;
+				margin: 40px auto;
+				padding: 0 20px;
+			}
+
+			.card {
+				background-color: #fff;
+				border-radius: 12px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+				padding: 30px;
+				margin-bottom: 30px;
+				transition: box-shadow 0.3s ease;
+			}
+
+			.card:hover {
+				box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+			}
+
+			h2 {
+				margin-top: 0;
+				font-size: 24px;
+				color: #444;
+			}
+
+			p {
+				font-size: 16px;
+				color: #555;
+			}
+
+			.btn {
+				display: inline-block;
+				background-color: #6da57f;
+				color: #fff;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				transition: background-color 0.3s ease;
+			}
+
+			.btn:hover {
+				background-color: #5a8f6c;
+			}
+
+			footer {
+				text-align: center;
+				padding: 20px;
+				font-size: 14px;
+				color: #888;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to Our Website</h1>
+		</header>
+
+		<div class="container">
+			<div class="card">
+				<h2>Our Mission</h2>
+				<p>
+					We strive to deliver value by creating meaningful
+					experiences for our users. Our mission is to innovate and
+					inspire through design and technology.
+				</p>
+				<a href="/about" class="btn">Learn More</a>
+			</div>
+
+			<div class="card">
+				<h2>Services</h2>
+				<p>
+					We offer a wide range of services including web design, app
+					development, and branding solutions tailored to your needs.
+				</p>
+				<a href="/services" class="btn">View Services</a>
+			</div>
+		</div>
+
+		<footer>&copy; 2025 Your Company. All rights reserved.</footer>
+	</body>
+</html>
